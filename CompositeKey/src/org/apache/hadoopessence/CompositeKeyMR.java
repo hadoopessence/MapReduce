@@ -176,7 +176,7 @@ public class CompositeKeyMR {
 
 		FileUtils.deleteDirectory(new File("/Local/data/output"));
 		Configuration conf = new Configuration();
-		Job job = Job.getInstance(conf, "GroupMR");
+		Job job = Job.getInstance(conf, "CompositeKey");
 		job.setJarByClass(CompositeKeyMR.class);
 		job.setMapperClass(CompositeKeyMapper.class);
 		job.setReducerClass(CompositeKeyReducer.class);
