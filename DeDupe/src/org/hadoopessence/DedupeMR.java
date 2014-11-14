@@ -1,4 +1,4 @@
-package org.techmytalk.dedupe;
+package org.hadoopessence;
 
 import java.io.DataInput;
 import java.io.DataOutput;

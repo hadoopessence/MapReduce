@@ -16,8 +16,6 @@ import org.apache.hadoop.mapreduce.Reducer;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 import org.apache.hadoop.util.Tool;
-import org.techmytalk.groupby.TopMR;
-import org.techmytalk.groupby.TopMR.TopRecordsJob;
 
 /**
  * 

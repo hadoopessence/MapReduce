@@ -1,4 +1,4 @@
-package org.techmytalk.groupby;
+package org.hadoopessence;
 
 import java.io.DataInput;
 import java.io.DataOutput;
