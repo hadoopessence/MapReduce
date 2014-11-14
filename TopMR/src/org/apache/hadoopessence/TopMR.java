@@ -1,4 +1,4 @@
-package org.hadoopessence;
+package org.apache.hadoopessence;
 
 import java.io.DataInput;
 import java.io.DataOutput;

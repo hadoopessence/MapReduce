@@ -1,4 +1,4 @@
-package org.hadoopessence;
+package org.apache.hadoopessence;
 
 
 
