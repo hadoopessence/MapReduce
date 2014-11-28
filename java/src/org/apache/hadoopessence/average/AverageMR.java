@@ -1,4 +1,4 @@
-package org.apache.hadoopessence;
+package org.apache.hadoopessence.average;
 
 import java.io.File;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package org.apache.hadoopessence;
+package org.apache.hadoopessence.textoutput;
 
 
 

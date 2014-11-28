@@ -1,4 +1,4 @@
-package org.apache.hadoopessence;
+package org.apache.hadoopessence.group;
 
 import java.io.DataInput;
 import java.io.DataOutput;
@@ -32,7 +32,7 @@ import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
  * 
  * 
  */
-public class CompositeKeyMR {
+public class GroupMR {
 
 	/**
 	 * Map task convert input record into key-value pair and pass to combiner or
@@ -45,7 +45,7 @@ public class CompositeKeyMR {
 	 * map(Object,Object,Context) for each input split and at last invoke
 	 * cleanup(Context) method.
 	 */
-	public static class CompositeKeyMapper extends
+	public static class GroupMapper extends
 			Mapper<LongWritable, Text, CompositeGroupKey, IntWritable> {
 
 		/** The cntry. */
@@ -94,7 +94,7 @@ public class CompositeKeyMR {
 	 * key-value after copying the file from remote node and pass to the reduce
 	 * tasks.
 	 * */
-	public static class CompositeKeyReducer
+	public static class GroupReducer
 			extends
 			Reducer<CompositeGroupKey, IntWritable, CompositeGroupKey, IntWritable> {
 
@@ -176,10 +176,10 @@ public class CompositeKeyMR {
 
 		FileUtils.deleteDirectory(new File("/Local/data/output"));
 		Configuration conf = new Configuration();
-		Job job = Job.getInstance(conf, "CompositeKey");
-		job.setJarByClass(CompositeKeyMR.class);
-		job.setMapperClass(CompositeKeyMapper.class);
-		job.setReducerClass(CompositeKeyReducer.class);
+		Job job = Job.getInstance(conf, "GroupMR");
+		job.setJarByClass(GroupMR.class);
+		job.setMapperClass(GroupMapper.class);
+		job.setReducerClass(GroupReducer.class);
 		job.setOutputKeyClass(CompositeGroupKey.class);
 		job.setOutputValueClass(IntWritable.class);
 		FileInputFormat.setMaxInputSplitSize(job, 10);

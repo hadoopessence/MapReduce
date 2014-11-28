@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.hadoopessence</groupId>
+	<groupId>org.apache.hadoopessence</groupId>
 	<artifactId>mapreduce</artifactId>
 	<packaging>jar</packaging>
 	<name>mapreduce</name>
@@ -20,25 +20,18 @@
 		<directory>${project.basedir}/target</directory>
 		<outputDirectory>${project.build.directory}/${project.build.finalName}/WEB-INF/classes</outputDirectory> 
 		<finalName>${project.artifactId}-${project.version}</finalName>
-		<testOutputDirectory>${project.build.directory}/test-classes
-		</testOutputDirectory>
-		<sourceDirectory>${project.basedir}/src/main/java</sourceDirectory>
-		<scriptSourceDirectory>src/main/scripts</scriptSourceDirectory>
-		<testSourceDirectory>${project.basedir}/src/test/java
+		<testOutputDirectory>${project.build.directory}/test-classes</testOutputDirectory>
+		<sourceDirectory>${project.basedir}/java/src</sourceDirectory>
+		<testSourceDirectory>${project.basedir}/test/src
 		</testSourceDirectory>
 		<resources>
 			<resource>
-				<directory>src/main/java</directory>
+				<directory>/java/src</directory>
 				<includes>
 					<include>**/*.*</include>
 				</includes>
 			</resource>
-			<resource>
-				<directory>src/main/resources</directory>
-				<includes>
-					<include>**/*.*</include>
-				</includes>
-			</resource>
+			
 		</resources>
 	</build>
 </project>
